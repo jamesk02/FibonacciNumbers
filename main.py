@@ -1,17 +1,11 @@
-fib_nums = dict({0: 0, 1: 1})
-
-
-def fibonacci(n):
-    # Checks if what we need has already been computed
-    # if so then simply return that value
-    if n in fib_nums:
-        return fib_nums.get(n)
-
-    # Stores the value in the dictionary so we don't have to
-    # recalculate when calculating other fibs that use this
-    fib_nums[n] = fibonacci(n - 1) + fibonacci(n - 2)
-    return fib_nums[n]
-
-
 if __name__ == "__main__":
-    print(fibonacci(int(input())))
+    n = int(input())
+
+    fib_nums = [0, 1]
+
+    for x in range(2, n):
+        fib_nums.append(fib_nums[x - 1] + fib_nums[x - 2])
+        0
+
+    print(fib_nums[n - 1])
+    
